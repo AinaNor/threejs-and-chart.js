@@ -1,0 +1,141 @@
+/* Base layout */
+.radar-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #111827; /* dark gray */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Loading state */
+.radar-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #111827;
+  color: white;
+}
+
+.loading-text {
+  color: #9ca3af;
+  font-size: 1.125rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* Title */
+.radar-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #22d3ee;
+  text-align: center;
+}
+
+/* Selector */
+.selector-container {
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.selector-label {
+  font-weight: 500;
+  color: #d1d5db;
+}
+
+.selector-input {
+  padding: 8px 12px;
+  background-color: #1f2937;
+  color: white;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.selector-input:focus {
+  border-color: #22d3ee;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.3);
+}
+
+/* Chart Wrapper */
+.chart-wrapper {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.chart-box {
+  width: 100%;
+  height: 500px; /* default desktop height */
+  background-color: #1f2937;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .chart-box {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .radar-title {
+    font-size: 1.5rem;
+  }
+
+  .selector-input {
+    width: 160px;
+  }
+
+  .chart-box {
+    height: 360px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .radar-container {
+    padding: 24px 12px;
+  }
+
+  .radar-title {
+    font-size: 1.25rem;
+  }
+
+  .chart-box {
+    height: 300px;
+    padding: 12px;
+  }
+
+  .selector-container {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+/* No data text */
+.no-data-text {
+  color: #9ca3af;
+  font-size: 1rem;
+  margin-top: 20px;
+}

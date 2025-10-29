@@ -1,0 +1,87 @@
+/* ====== Globe Layout ====== */
+
+.globe-container {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* For loading state */
+.globe-loading {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.globe-loading-text {
+  font-size: 1.2rem;
+  color: #9ca3af;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* ====== Location Pin Labels ====== */
+.globe-pin-label {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4px 6px;
+  border-radius: 4px;
+  pointer-events: auto;
+  transform: translate(-50%, -120%);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.globe-pin-label:hover {
+  background: rgba(255, 255, 0, 0.8);
+  color: black;
+  transform: translate(-50%, -130%) scale(1.05);
+}
+
+/* ====== Responsiveness ====== */
+@media (max-width: 1024px) {
+  .globe-container {
+    height: 80vh;
+  }
+  .globe-pin-label {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .globe-container {
+    height: 70vh;
+  }
+  .globe-pin-label {
+    font-size: 0.7rem;
+    padding: 3px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .globe-container {
+    height: 60vh;
+  }
+  .globe-pin-label {
+    font-size: 0.65rem;
+    padding: 2px 4px;
+  }
+  .globe-loading-text {
+    font-size: 1rem;
+  }
+}
