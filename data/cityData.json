@@ -1,0 +1,39 @@
+{
+  "chartConfig": [
+    {
+      "labels": [
+        "Social Impact",
+        "Infrastructure",
+        "Market Attractiveness",
+        "System Efficiency",
+        "Innovation"
+      ]
+    }
+  ],
+  "chartData": [
+    {
+      "id": "1",
+      "city_name": "Warsaw",
+      "region": "Europe",
+      "global_data": [52.0, 21.6, 13.6, 55.2, 2.5],
+      "region_data": [65.0, 65.2, 33.0, 69.2, 23.1],
+      "city_data": [95.2, 25.28, 45.1, 32.1, 96.2]
+    },
+    {
+      "id": "2",
+      "city_name": "Kuala Lumpur",
+      "region": "Asia",
+      "global_data": [22.0, 71.6, 10.6, 25.2, 12.8],
+      "region_data": [75.0, 15.2, 12.7, 5.2, 53.6],
+      "city_data": [25.7, 25.28, 42.8, 56.2, 66.2]
+    },
+    {
+      "id": "3",
+      "city_name": "Mexico City",
+      "region": "Latin America",
+      "global_data": [27.2, 21.8, 13.6, 15.2, 102.5],
+      "region_data": [99.0, 62.7, 62.0, 34.2, 23.8],
+      "city_data": [55.2, 99.28, 45.1, 55.1, 26.2]
+    }
+  ]
+}
