@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/threejs-and-chart.js/static/css/main.6807ed1b.css",
-    "main.js": "/threejs-and-chart.js/static/js/main.f73049eb.js",
+    "main.css": "/threejs-and-chart.js/static/css/main.e3a50790.css",
+    "main.js": "/threejs-and-chart.js/static/js/main.978659a2.js",
     "static/js/453.116c669c.chunk.js": "/threejs-and-chart.js/static/js/453.116c669c.chunk.js",
     "static/media/logo.svg": "/threejs-and-chart.js/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/threejs-and-chart.js/index.html",
-    "main.6807ed1b.css.map": "/threejs-and-chart.js/static/css/main.6807ed1b.css.map",
-    "main.f73049eb.js.map": "/threejs-and-chart.js/static/js/main.f73049eb.js.map",
+    "main.e3a50790.css.map": "/threejs-and-chart.js/static/css/main.e3a50790.css.map",
+    "main.978659a2.js.map": "/threejs-and-chart.js/static/js/main.978659a2.js.map",
     "453.116c669c.chunk.js.map": "/threejs-and-chart.js/static/js/453.116c669c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6807ed1b.css",
-    "static/js/main.f73049eb.js"
+    "static/css/main.e3a50790.css",
+    "static/js/main.978659a2.js"
   ]
 }
