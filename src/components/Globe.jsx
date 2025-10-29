@@ -3,7 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import * as THREE from "three";
 
-// ✅ Convert lat/long to 3D coordinates
+// convert lat/long to 3D coordinates
 function latLongToVector3(lat, lon, radius) {
   const phi = (90 - lat) * (Math.PI / 180);
   const theta = (lon + 180) * (Math.PI / 180);
@@ -27,7 +27,7 @@ function LocationPin({ location, radius }) {
 
   return (
     <group position={position}>
-      {/* Label (clickable) */}
+      {/* label (clickable) */}
       <Html distanceFactor={10} center>
         <a
           href={location.branch_url}
@@ -49,7 +49,7 @@ function LocationPin({ location, radius }) {
         </a>
       </Html>
 
-      {/* Hoverable Pin */}
+      {/* hoverable pin */}
       <mesh
         ref={meshRef}
         onPointerOver={() => setHovered(true)}
@@ -89,7 +89,7 @@ const earthTexture = new THREE.TextureLoader().load(
 
   return (
     <group ref={earthRef}>
-      {/* Earth with subtle borders */}
+      {/* earth with subtle borders */}
       <mesh>
         <sphereGeometry args={[1, 64, 64]} />
         <meshStandardMaterial
@@ -100,7 +100,7 @@ const earthTexture = new THREE.TextureLoader().load(
         />
       </mesh>
 
-      {/* Location pins (fetched data) */}
+      {/* location pins (fetched data) */}
       {locations.map((loc) => (
         <LocationPin key={loc.id} location={loc} radius={1} />
       ))}
@@ -112,7 +112,7 @@ export default function Globe() {
   const [locations, setLocations] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // ✅ Fetch data dynamically (from /public )
+  // eetch data dynamically (from /public )
   useEffect(() => {
     async function fetchData() {
       try {
