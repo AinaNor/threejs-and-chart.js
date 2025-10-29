@@ -10,7 +10,7 @@ import {
   Title,
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
-import "./RadarChart.css"; // Import responsive CSS
+import "./RadarChart.css";
 
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend, Title);
 
@@ -89,7 +89,7 @@ export default function RadarChart() {
 
       <h2 className="radar-title">City Comparison Radar Chart</h2>
 
-      {/* City Selector */}
+      {/* city Selector */}
       <div className="selector-container">
         <label htmlFor="citySelector" className="selector-label">
           Choose City:
@@ -108,7 +108,7 @@ export default function RadarChart() {
         </select>
       </div>
 
-      {/* Radar Chart */}
+      {/* radar chart */}
       {chartData ? (
         <div className="chart-wrapper">
           <div className="chart-box">
@@ -116,7 +116,7 @@ export default function RadarChart() {
               data={chartData}
               options={{
                 responsive: true,
-                maintainAspectRatio: false, // 👈 allows resizing
+                maintainAspectRatio: false, // allows resizing
                 animation: { duration: 1000, easing: "easeInOutQuart" },
                 plugins: {
                   legend: { position: "top", labels: { color: "#fff" } },
